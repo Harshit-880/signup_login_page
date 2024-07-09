@@ -8,7 +8,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth import logout
 
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'account/home.html')
 
 @method_decorator(csrf_exempt, name='dispatch')
 def signup_view(request):
