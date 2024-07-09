@@ -5,6 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
+from django.contrib.auth import logout
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -29,6 +30,10 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     return render(request, 'account/login.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 @login_required
 def dashboard_view(request):
