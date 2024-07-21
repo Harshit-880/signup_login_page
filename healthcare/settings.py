@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z=c+%%s$#$(+u7ii3lw8_1w)*5wn7yn*kq_%ooj)l_odi)fr+5'
 DEBUG=True
 
-ALLOWED_HOSTS = ['signup-login-page-r8te.onrender.com']
+ALLOWED_HOSTS = []
 
 
 
